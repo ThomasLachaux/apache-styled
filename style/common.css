@@ -1,0 +1,114 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  color: #212121;
+  font-size: 16px;
+  font-family: system-ui, sans-serif;
+  line-height: 1.5;
+}
+
+body {
+  min-height: 100vh;
+  border-top: 0.5rem solid #90a4ae;
+  border-bottom: 0.5rem solid #90a4ae;
+}
+
+a {
+  color: #6200ea;
+  display: inline-block;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+a:hover {
+  border-bottom: 1px solid currentColor;
+}
+
+table {
+  text-align: left;
+  white-space: nowrap;
+  border-collapse: collapse;
+}
+
+table tr:hover {
+  background-color: #eee;
+}
+
+table tr .indexcolicon a {
+  border: none;
+}
+
+main {
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  max-width: 56rem;
+}
+
+.title {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin: 2rem 0;
+}
+
+.title .js-path a {
+  padding: 0 0.25rem 0;
+  text-decoration: none;
+}
+
+footer,
+address {
+  padding: 2rem 1rem;
+  text-align: center;
+  font-size: 0.875rem;
+  opacity: 0.875;
+}
+
+#snackbar {
+  visibility: hidden;
+  min-width: 250px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 30px;
+  font-size: 16px;
+}
+
+#snackbar.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;} 
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;} 
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+
+img {
+  height: 32px;
+}
